@@ -1,5 +1,5 @@
 ---
-title: "An example preprint / working paper"
+title: "CCT (Cyclic Co-Teaching)"
 authors:
 - admin
 date: "2019-04-07T00:00:00Z"
@@ -22,7 +22,7 @@ abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-- Large Language Models
+- Aprendizado com Rótulos Ruidosos
 
 featured: true
 

@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Alex Johnson
+title: Jorge Kamassury
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Jorge
+last_name: Kamassury
 
 # Pronouns (optional)
-pronouns: he/him
+#pronouns: he/him
 
 # Status emoji
 status:
@@ -23,150 +23,143 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: Pesquisador em IA e Doutor em Engenharia Elétrica
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: Instituto SENAI de Inovação em Sistemas Embarcados (ISI-SE)
+    url: https://www.senai.portaldaindustria.com.br/web/senai/institucional/institutos-de-inovacao
+  - name: Universidade Federal de Santa Catarina (UFSC)
+    url: https://ufsc.br/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/AlexAIResearch
+    url: 'mailto:jorge.kamassury@sc.senai.br'
+    label: E-mail
+  #- icon: brands/x
+  #  url: https://twitter.com/AlexAIResearch
   - icon: brands/github
-    url: https://github.com/alexjohnsonai
+    url: https://github.com/kamassury
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
+    url: https://www.linkedin.com/in/jorge-kamassury/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=alexjohnson
+    url: https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en
   - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://orcid.org/0000-0001-8335-9796
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Inteligência Artificial
+  - Machine Learning
+  - Deep Learning
+  - Processamento de Sinais
+  - Visão Computacional
+  - LLMs
+  - Modelagem Física
+  - Indústria 4.0
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
+  - area: Doutorado em Engenharia Elétrica
+    institution: Universidade Federal de Santa Catarina
     icon: ""
-    date_start: 2015-09-01
-    date_end: 2019-06-30
+    date_start: 2020-03-15
+    date_end: 2025-10-20
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
+      Tese: *Cyclic Co-Teaching and Optimized Baselines for Robust Deep Learning with Noisy Labels*.    
+      Orientador: Prof. Dr. Danilo Silva (CNPq).  
+      Pesquisa em aprendizado profundo robusto, técnicas de co-treinamento e estimação de incerteza aplicadas a bases de dados com rótulos ruidosos.
     button:
       text: 'Read Thesis'
       url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
+  - area: Mestrado em Engenharia Elétrica
+    institution: Universidade Federal de Santa Catarina
     icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
+    date_start: 2018-02-20
+    date_end: 2020-05-15
     summary: |
-      GPA: 4.0/4.0
-
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
+      Título: *Decodificação de códigos de comprimento curto usando redes neurais profundas*. 
+      Orientador: Prof. Dr. Danilo Silva (CNPq).
+      Pesquisa em decodificadores baseados em síndrome e redes neurais para comunicações críticas.
+  - area: Bacharelado em Engenharia Física
+    institution: Universidade Federal do Oeste do Pará
     icon: ""
-    date_start: 2009-09-01
-    date_end: 2013-05-31
+    date_start: 2011-03-15
+    date_end: 2017-11-30
     summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
-
+      Período sanduíche na Universidade de Aveiro (Portugal) pelo Programa Ciência sem Fronteiras.  
+      Ênfase em Física Aplicada, Controle e Sistemas, e Modelagem Computacional.
+  
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
-    icon: ''
+  - position: Pesquisador em Inteligência Artificial
+    company_name: Instituto SENAI de Inovação em Sistemas Embarcados (ISI-SE)
+    company_url: 'https://www.sc.senai.br/isi-sistemas-embarcados'
     date_start: 2020-01-01
     date_end: ''
-    summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Atua em pesquisa aplicada e desenvolvimento de soluções de Inteligência Artificial voltadas à **manutenção preditiva**, **detecção de anomalias** e **otimização de processos industriais**.  
+      Projetos principais:
+      - **Digitalização de Linha (Krah)** — Sistema de análise de sensores e predição de falhas usando CNNs, LSTMs e modelos híbridos.
+      - **Proomix (Carne Cultivada)** — Desenvolvimento de ferramentas de IA para otimização multiobjetivo de misturas microalgais e análise multiômica.
+  - position: Pesquisador Associado
+    company_name: Grupo de Aprendizado de Máquina e suas Aplicações (GAMA/UFSC)
+    company_url: 'https://gama.ufsc.br/'
+    date_start: 2019-01-01
+    date_end: ''
+    summary: |
+      Pesquisa em aprendizado de máquina, deep learning, e técnicas de aprendizado com rótulos ruidosos.
+  - position: Professor e Monitor
+    company_name: Universidade Federal do Oeste do Pará (UFOPA)
+    date_start: 2014-01-01
+    date_end: 2017-12-01
+    summary: |
+      Monitoria e docência nas disciplinas de **Sistemas de Controle**, **Circuitos Elétricos** e **Informática Aplicada**.
+
 
 # Skills
-# Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Machine Learning e Deep Learning
     items:
-      - name: Python & PyTorch
-        description: ''
+      - name: PyTorch, TensorFlow, Scikit-learn
         percent: 95
-        icon: code-bracket
-      - name: Machine Learning
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
-        description: ''
-        percent: 85
-        icon: cloud
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking in the Rockies
-        description: ''
-        percent: 80
-        icon: person-simple-walk
-      - name: Building Custom PCs
-        description: ''
+      - name: Modelagem de Séries Temporais e Forecasting
         percent: 90
-        icon: cpu-chip
-      - name: Sci-Fi Reading
-        description: ''
-        percent: 70
-        icon: book-open
+      - name: Aprendizado com Rótulos Ruidosos e Regularização
+        percent: 95
+  - name: Engenharia de Software
+    color: '#2ecc71'
+    color_border: '#27ae60'
+    items:
+      - name: Python, Django, FastAPI, Docker, GitLab CI/CD
+        percent: 90
+      - name: Arquitetura de Microserviços e MLOps
+        percent: 85
 
+# Languages
 languages:
-  - name: English
+  - name: Português
     percent: 100
-  - name: Spanish
-    percent: 50
+  - name: Inglês
+    percent: 90
 
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
+# Awards / Recognitions
 awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
+  - title: Prêmio Destaque em Pesquisa Aplicada
+    date: '2023-10-01'
+    awarder: SENAI ISI-SE
     summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
-    icon: hero/academic-cap
-    summary: |
-      Recognized for contributions to scaling laws in deep learning.
+      Reconhecimento por contribuições no desenvolvimento de soluções de IA para manutenção preditiva e otimização de processos industriais.
+  - title: Honra ao Mérito — Melhores Trabalhos em Ciências Exatas e da Terra
+    date: '2021-12-01'
+    awarder: II Congresso Brasileiro Interdisciplinar de Ciência e Tecnologia
+  - title: Honra ao Mérito — Melhor Trabalho Completo
+    date: '2019-09-01'
+    awarder: XIV Simpósio Brasileiro de Engenharia Física
+  - title: Bolsa de Pesquisa CNPq
+    date: '2022-01-01'
+    awarder: Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)
 ---
 
-Alex Johnson is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+Sou **pesquisador em Inteligência Artificial**, com **forte background em Modelagem Física e Processamento de Sinais e Sistemas**.   Atuo na interface entre **aprendizado de máquina** e **aplicações industriais**, desenvolvendo **soluções de IA robusta** para **monitoramento inteligente**, **manutenção preditiva** e **otimização de processos**.
+
+Minhas pesquisas atuais concentram-se em  **Técnicas de Aprendizado de Máquina Robustas**, **MLOps Industrial**, **Processamento de Sinais** e **Física Aplicada**, sempre buscando conectar teoria e prática na criação de soluções com impacto real na indústria.

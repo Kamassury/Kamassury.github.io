@@ -34,7 +34,8 @@ hugoblox:
     arxiv: 1512.04133v1
 
 links:
-  - type: pdf
+  - type: "file-text"
+    name: "PDF"
     url: http://arxiv.org/pdf/1512.04133v1
   - type: code
     url: https://github.com/HugoBlox/hugo-blox-builder

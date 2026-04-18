@@ -31,20 +31,23 @@ sections:
         shape: circle # Options: circle (default), square, rounded
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: '📚 Minhas Pesquisas'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        Acredito que a **Inteligência Artificial** pode se tornar uma ferramenta confiável para compreender e antecipar comportamentos complexos — seja em sistemas físicos, biológicos ou industriais.  
+        Minha pesquisa busca aproximar **ciência e engenharia**, combinando **aprendizado profundo robusto**, **incerteza**, e **modelagem informada por física** para criar modelos mais interpretáveis e resilientes.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        Interesso-me especialmente por **sistemas ruidosos**, onde os dados são imperfeitos e a confiabilidade das predições é essencial.  
+        Nessa fronteira entre **Física, Matemática e IA**, procuro desenvolver métodos que tornem o *machine learning* mais seguro, transparente e útil para o mundo real.
 
-        Please reach out to collaborate 😃
+        Estou sempre aberto a colaborações e novas ideias. 😃
     design:
-      columns: '1'
+      #columns: '2'
+      width: "full"
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Publicações em Destaque
       filters:
         folders:
           - publications
@@ -54,7 +57,7 @@ sections:
       columns: 2
   - block: collection
     content:
-      title: Recent Publications
+      title: Publicações Recentes
       text: ''
       filters:
         folders:

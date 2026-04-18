@@ -6,16 +6,16 @@
 # Appearance
 appearance:
   mode: system
-  color: indigo
+  color: emerald
 
 # SEO
 marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'Jorge Kamassury'
+    description: 'PhD em Eng. Elétrica (UFSC) e Pesquisador em IA/ML no ISI-SE.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -35,12 +35,12 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: 'Your Name'
-
-# Site footer
+      text: 'Jorge Kamassury'
+    
+# Site footer (links exibidos)
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Jorge Kamassury. Este site está licenciado sob {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -49,12 +49,12 @@ footer:
 
 # Localization
 locale:
-  date_format: 'Jan 2, 2006'
-  time_format: '3:04 PM'
+  date_format: "2 Jan 2006"     # formato PT-BR amigável
+  time_format: "15:04"
 
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
