@@ -27,8 +27,8 @@ role: Pesquisador em IA e Doutor em Engenharia Elétrica
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Instituto SENAI de Inovação em Sistemas Embarcados (ISI-SE)
-    url: https://www.senai.portaldaindustria.com.br/web/senai/institucional/institutos-de-inovacao
+  - name: Fundação CERTI
+    url: https://www.certi.org.br/
   - name: Universidade Federal de Santa Catarina (UFSC)
     url: https://ufsc.br/
 
@@ -52,12 +52,11 @@ profiles:
 interests:
   - Inteligência Artificial
   - Machine Learning
-  - Deep Learning
   - Processamento de Sinais
   - Visão Computacional
   - LLMs
-  - Modelagem Física
-  - Indústria 4.0
+  - Physics-Informed Machine Learning
+  - MLOps Industrial
 
 education:
   - area: Doutorado em Engenharia Elétrica
@@ -94,26 +93,26 @@ work:
   - position: Pesquisador em Inteligência Artificial
     company_name: Instituto SENAI de Inovação em Sistemas Embarcados (ISI-SE)
     company_url: 'https://www.sc.senai.br/isi-sistemas-embarcados'
-    date_start: 2020-01-01
-    date_end: ''
+    date_start: 2024-02-01
+    date_end: '2026-02-01'
     summary: |
       Atua em pesquisa aplicada e desenvolvimento de soluções de Inteligência Artificial voltadas à **manutenção preditiva**, **detecção de anomalias** e **otimização de processos industriais**.  
       Projetos principais:
-      - **Digitalização de Linha (Krah)** — Sistema de análise de sensores e predição de falhas usando CNNs, LSTMs e modelos híbridos.
-      - **Proomix (Carne Cultivada)** — Desenvolvimento de ferramentas de IA para otimização multiobjetivo de misturas microalgais e análise multiômica.
-  - position: Pesquisador Associado
+      - **Digitalização de Linha** — Sistema de análise de sensores e predição de falhas usando CNNs, LSTMs e modelos híbridos.
+      - **Carne Cultivada** — Desenvolvimento de ferramentas de IA para otimização multiobjetivo de misturas microalgais e análise multiômica.
+  - position: Estudante Pesquisador
     company_name: Grupo de Aprendizado de Máquina e suas Aplicações (GAMA/UFSC)
     company_url: 'https://gama.ufsc.br/'
     date_start: 2019-01-01
     date_end: ''
     summary: |
       Pesquisa em aprendizado de máquina, deep learning, e técnicas de aprendizado com rótulos ruidosos.
-  - position: Professor e Monitor
+  - position: Monitor
     company_name: Universidade Federal do Oeste do Pará (UFOPA)
     date_start: 2014-01-01
     date_end: 2017-12-01
     summary: |
-      Monitoria e docência nas disciplinas de **Sistemas de Controle**, **Circuitos Elétricos** e **Informática Aplicada**.
+      Monitoria e docência nas disciplinas de **Sistemas de Controle** e **Circuitos Elétricos**.
 
 
 # Skills
@@ -144,11 +143,6 @@ languages:
 
 # Awards / Recognitions
 awards:
-  - title: Prêmio Destaque em Pesquisa Aplicada
-    date: '2023-10-01'
-    awarder: SENAI ISI-SE
-    summary: |
-      Reconhecimento por contribuições no desenvolvimento de soluções de IA para manutenção preditiva e otimização de processos industriais.
   - title: Honra ao Mérito — Melhores Trabalhos em Ciências Exatas e da Terra
     date: '2021-12-01'
     awarder: II Congresso Brasileiro Interdisciplinar de Ciência e Tecnologia
