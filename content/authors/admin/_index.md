@@ -36,7 +36,7 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:jorge.kamassury@sc.senai.br'
+    url: 'mailto:kamassury@gmail.com'
     label: E-mail
   #- icon: brands/x
   #  url: https://twitter.com/AlexAIResearch
@@ -170,6 +170,8 @@ awards:
     awarder: XIV Simpósio Brasileiro de Engenharia Física
 ---
 
-Sou **pesquisador em Inteligência Artificial**, com **forte background em Modelagem Física e Processamento de Sinais e Sistemas**.   Atuo na interface entre **aprendizado de máquina** e **aplicações industriais**, desenvolvendo **soluções de IA robusta** para **monitoramento inteligente**, **manutenção preditiva** e **otimização de processos**.
+Sou **engenheiro físico** e **doutor em Engenharia Elétrica** (UFSC), pesquisando na fronteira entre **aprendizado profundo robusto**, **modelagem informada por física** e **aplicações industriais críticas**.
 
-Minhas pesquisas atuais concentram-se em  **Técnicas de Aprendizado de Máquina Robustas**, **MLOps Industrial**, **Processamento de Sinais** e **Física Aplicada**, sempre buscando conectar teoria e prática na criação de soluções com impacto real na indústria.
+Interesso-me especialmente por cenários com dados imperfeitos — **rótulos ruidosos**, **incerteza**, **validação em ambiente real** — onde confiabilidade importa mais que performance em benchmark. Também trabalho com **física matemática**, **teoria de sistemas dinâmicos** e **otimização**, buscando conectar fundamentação teórica e métodos aplicados.
+
+Atualmente atuo como Pesquisador em IA na **Fundação CERTI**, desenvolvendo métodos para sistemas complexos e de missão crítica.
