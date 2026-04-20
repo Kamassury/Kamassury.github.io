@@ -1,62 +1,43 @@
 ---
 title: "CCT: A Cyclic Co-Teaching Approach to Train Deep Neural Networks With Noisy Labels"
 authors:
-  - "Jorge K. S. Kamassury"
-  - "Henrique Pickler"
-  - "Filipe R. Cordeiro"
-  - "Danilo Silva"
+  - Jorge K. S. Kamassury
+  - Henrique Pickler
+  - Filipe R. Cordeiro
+  - Danilo Silva
 date: "2025-05-15"
 publication_types: ["article-journal"]
-publication: "*IEEE Access*"
+publication: "*IEEE Access*, 13, 43843–43860"
 publication_short: "IEEE Access"
 featured: true
 doi: "10.1109/ACCESS.2025.3548510"
-volume: "13"
-pages: "43843–43860"
-
 abstract: |
-  Propomos o método **Cyclic Co-Teaching (CCT)**, uma abordagem robusta para o treinamento de redes neurais profundas em bases de dados com rótulos ruidosos.
-  O método introduz ciclos de aprendizado entre redes gêmeas e uma taxa cíclica de retenção de amostras (*Cyclic Sample Retention Rate*), aprimorando a capacidade de generalização em cenários com ruído.
-
-summary: "Método CCT para aprendizado profundo robusto com rótulos ruidosos (IEEE Access, 2025)."
-
+  Deep neural networks are highly susceptible to memorizing incorrect labels, compromising generalization on real-world datasets with inaccurate annotations. Among existing approaches, Co-Teaching trains two models in parallel to identify potentially noisy samples through cross-selection, but still suffers from error accumulation and overfitting. We propose **Cyclic Co-Teaching (CCT)**, which mitigates these limitations through periodic modulations of the learning rate and sample retention, establishing an alternating dynamic between specialization and consolidation phases. We also introduce a two-step univariate optimization for hyperparameter tuning. CCT consistently outperforms state-of-the-art methods on synthetic (CIFAR-10, CIFAR-100, Tiny-ImageNet) and real-world (Animal-10N, Food-101N, Clothing1M) benchmarks, particularly under high-noise scenarios.
+summary: "Método CCT: ciclos de aprendizado e retenção de amostras para aprendizado profundo robusto com rótulos ruidosos. IEEE Access, 2025."
 tags:
-  - Aprendizado com Rótulos Ruidosos
-  - Robust Training
+  - Noisy Labels
+  - Robust Deep Learning
   - Co-Teaching
-  - Deep Learning
-  - Noise Robustness
-
+  - Cyclic Learning Rate
+  - Sample Selection
 links:
-  - icon: "document-text"
-    name: "PDF"
+  - name: "IEEE Access"
     url: "https://ieeexplore.ieee.org/document/10912480"
-  - type: code
-    name: "Código-fonte"
+    icon_pack: "ai"
+    icon: "ieee"
+  - name: "Code"
     url: "https://github.com/kamassury/cyclic-co-teaching"
-  #- icon: "database"
-  #  name: "Dataset"
-  #  url: ""
-  #- icon: "presentation-chart-line"
-  #  name: "Apresentação"
-  #  url: "https://www.slideshare.net/"
-  - icon: "document-duplicate"
-    name: "Citação BibTeX"
+    icon_pack: "fab"
+    icon: "github"
+  - name: "BibTeX"
     url: "cite.bib"
-  #- icon: "link"
-  #  name: "DOI"
-  #  url: "https://doi.org/10.1109/ACCESS.2025.3548510"
-
-
+    icon_pack: "fas"
+    icon: "quote-right"
 image:
-  caption: "Esquema ilustrativo do método Cyclic Co-Teaching (CCT)."
+  caption: "Visão geral do método Cyclic Co-Teaching."
   focal_point: "center"
   preview_only: false
-
 projects: []
-slides: ""
 ---
-O artigo **CCT: A Cyclic Co-Teaching Approach to Train Deep Neural Networks With Noisy Labels** apresenta um método inovador de aprendizado profundo robusto, voltado para cenários com **rótulos ruidosos** (*Learning with Noisy Labels*).
-O **CCT** combina duas redes neurais que trocam amostras de treinamento de forma cíclica, reduzindo o impacto de erros de anotação e aumentando a confiabilidade do modelo.
 
-Publicação disponível em: [IEEE Access](https://ieeexplore.ieee.org/document/10912480).
+Propomos **Cyclic Co-Teaching (CCT)**, um método de treinamento robusto para redes neurais profundas em bases com rótulos ruidosos. O método combina **modulações cíclicas da taxa de aprendizado** e **retenção de amostras**, criando uma dinâmica alternada entre fases de especialização (aprendizado intensivo) e consolidação (estabilização). Experimentos em bases sintéticas (CIFAR-10/100, Tiny-ImageNet) e reais (Animal-10N, Food-101N, Clothing1M) mostram ganhos consistentes sobre o estado da arte, especialmente em cenários de alta taxa de ruído.
