@@ -24,17 +24,13 @@ tags:
   - Sample Selection
 links:
   - name: "IEEE Access"
-    url: "https://ieeexplore.ieee.org/document/10912480"
-    icon_pack: "ai"
-    icon: "ieee"
+    url: "https://doi.org/10.1109/ACCESS.2025.3548510"
+    icon_pack: "hero"
+    icon: "document-text"
   - name: "Code"
-    url: "https://github.com/kamassury/cyclic-co-teaching"
-    icon_pack: "fab"
-    icon: "github"
-  - name: "BibTeX"
-    url: "cite.bib"
-    icon_pack: "fas"
-    icon: "quote-right"
+    url: "https://github.com/Kamassury/CCT"
+    icon_pack: "hero"
+    icon: "code-bracket"
 image:
   caption: "Visão geral do método Cyclic Co-Teaching."
   focal_point: "center"

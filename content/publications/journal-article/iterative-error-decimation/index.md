@@ -21,12 +21,18 @@ tags:
   - Error Correction
   - Deep Learning
 links:
-  - name: "Paper"
+  - name: "JCIS"
     url: "https://jcis.sbrt.org.br/jcis/article/view/776"
+    icon_pack: "hero"
+    icon: "document-text"
   - name: "PDF"
     url: "https://jcis.sbrt.org.br/jcis/article/view/776/526"
-  - name: "BibTeX"
-    url: "cite.bib"
+    icon_pack: "hero"
+    icon: "document-arrow-down"
+  - name: "Code"
+    url: "https://github.com/Kamassury/IED"
+    icon_pack: "hero"
+    icon: "code-bracket"
 image:
   caption: ""
   focal_point: "center"

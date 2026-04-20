@@ -12,6 +12,7 @@ sections:
     content:
       title: 📘 Artigos em Periódicos
       text: ''
+      count: 0
       filters:
         folders:
           - publications
@@ -25,6 +26,7 @@ sections:
     content:
       title: 📄 Trabalhos em Conferências
       text: ''
+      count: 0
       filters:
         folders:
           - publications

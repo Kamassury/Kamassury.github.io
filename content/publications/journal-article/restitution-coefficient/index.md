@@ -22,8 +22,14 @@ tags:
   - Coefficient of Restitution
   - Mathematical Physics
 links:
-  - name: "Paper (SciELO)"
+  - name: "RBEF"
     url: "https://www.scielo.br/j/rbef/a/Nhf7kKcDVmkMXLTvRRFxzRb/?lang=pt"
+    icon_pack: "hero"
+    icon: "document-text"
+  - name: "PDF"
+    url: "https://www.scielo.br/j/rbef/a/Nhf7kKcDVmkMXLTvRRFxzRb/?format=pdf&lang=pt"
+    icon_pack: "hero"
+    icon: "document-arrow-down"
 image:
   caption: ""
   focal_point: "center"

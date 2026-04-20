@@ -25,12 +25,14 @@ tags:
   - Mathematical Physics
   - Quantum Field Theory
 links:
-  - name: "Paper"
+  - name: "JCEC"
     url: "https://periodicos.ufv.br/jcec/article/view/13317"
+    icon_pack: "hero"
+    icon: "document-text"
   - name: "PDF"
     url: "https://periodicos.ufv.br/jcec/article/view/13317/6937"
-  - name: "BibTeX"
-    url: "cite.bib"
+    icon_pack: "hero"
+    icon: "document-arrow-down"
 image:
   caption: ""
   focal_point: "center"
