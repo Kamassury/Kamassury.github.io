@@ -70,7 +70,7 @@ education:
       Pesquisa em aprendizado profundo robusto, técnicas de co-treinamento e estimação de incerteza aplicadas a bases de dados com rótulos ruidosos.
     button:
       text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
+      url: 'https://repositorio.ufsc.br/handle/123456789/270466'
   - area: Mestrado em Engenharia Elétrica
     institution: Universidade Federal de Santa Catarina
     icon: ""
@@ -80,6 +80,9 @@ education:
       Título: *Decodificação de códigos de comprimento curto usando redes neurais profundas*. 
       Orientador: Prof. Dr. Danilo Silva (CNPq).
       Pesquisa em decodificadores baseados em síndrome e redes neurais para comunicações críticas.
+    button:
+      text: 'Read Dissertation'
+      url: 'https://repositorio.ufsc.br/handle/123456789/216351'
   - area: Bacharelado em Engenharia Física
     institution: Universidade Federal do Oeste do Pará
     icon: ""
@@ -91,15 +94,32 @@ education:
   
 work:
   - position: Pesquisador em Inteligência Artificial
+    company_name: Fundação CERTI
+    company_url: 'https://www.certi.org.br/'
+    date_start: 2026-03-01
+    date_end: ''
+    summary: |
+      Atuação em Pesquisa & Desenvolvimento de métodos avançados de Inteligência Artificial para aplicações em sistemas complexos e de missão crítica, com foco em **robustez**, **confiabilidade** e **validação em ambientes reais**.  
+      Linhas de pesquisa principais:
+      - **Visão Computacional** aplicada a cenários industriais e críticos.
+      - **Edge AI e Processamento em Borda** para sistemas embarcados.
+      - **Sistemas Inteligentes** para ambientes críticos e de alta exigência operacional.
+  - position: Pesquisador em Inteligência Artificial
     company_name: Instituto SENAI de Inovação em Sistemas Embarcados (ISI-SE)
     company_url: 'https://www.sc.senai.br/isi-sistemas-embarcados'
     date_start: 2024-02-01
     date_end: '2026-02-01'
     summary: |
-      Atua em pesquisa aplicada e desenvolvimento de soluções de Inteligência Artificial voltadas à **manutenção preditiva**, **detecção de anomalias** e **otimização de processos industriais**.  
-      Projetos principais:
-      - **Digitalização de Linha** — Sistema de análise de sensores e predição de falhas usando CNNs, LSTMs e modelos híbridos.
-      - **Carne Cultivada** — Desenvolvimento de ferramentas de IA para otimização multiobjetivo de misturas microalgais e análise multiômica.
+      Pesquisa e desenvolvimento de ferramentas avançadas de Inteligência Artificial para aplicações em **Indústria 4.0**, com atuação em:
+      - **IA aplicada à Indústria** — modelagem preditiva, detecção de anomalias e otimização de processos.
+      - **Sistemas Embarcados para Automação**.
+  - position: Pesquisador Colaborador
+    company_name: Instituto Federal do Pará (IFPA)
+    company_url: 'https://ifpa.edu.br/'
+    date_start: 2021-06-01
+    date_end: ''
+    summary: |
+      Pesquisa e orientação nas áreas de **Modelagem Computacional e Métodos Numéricos** e **Física Matemática**, com ênfase em métodos aplicados à ciência e engenharia.    
   - position: Estudante Pesquisador
     company_name: Grupo de Aprendizado de Máquina e suas Aplicações (GAMA/UFSC)
     company_url: 'https://gama.ufsc.br/'
@@ -112,8 +132,7 @@ work:
     date_start: 2014-01-01
     date_end: 2017-12-01
     summary: |
-      Monitoria e docência nas disciplinas de **Sistemas de Controle** e **Circuitos Elétricos**.
-
+      Monitoria nas disciplinas de **Sistemas de Controle** e **Circuitos Elétricos**.
 
 # Skills
 skills:
@@ -149,9 +168,6 @@ awards:
   - title: Honra ao Mérito — Melhor Trabalho Completo
     date: '2019-09-01'
     awarder: XIV Simpósio Brasileiro de Engenharia Física
-  - title: Bolsa de Pesquisa CNPq
-    date: '2022-01-01'
-    awarder: Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)
 ---
 
 Sou **pesquisador em Inteligência Artificial**, com **forte background em Modelagem Física e Processamento de Sinais e Sistemas**.   Atuo na interface entre **aprendizado de máquina** e **aplicações industriais**, desenvolvendo **soluções de IA robusta** para **monitoramento inteligente**, **manutenção preditiva** e **otimização de processos**.
