@@ -1,0 +1,149 @@
+---
+---
+
+<canvas class="synapse-layer" data-synapse aria-hidden="true"></canvas>
+
+<style>
+  .synapse-layer {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    inline-size: 100%;
+    block-size: 100%;
+    pointer-events: none;
+    color: light-dark(oklch(0.48 0.15 292), var(--accent));
+    opacity: 0.75;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .synapse-layer { display: none; }
+  }
+</style>
+
+<script>
+  type Node = { x: number; y: number; level: number }
+  type Pulse = { a: number; b: number; p: number }
+
+  function startSynapses() {
+    const canvas = document.querySelector<HTMLCanvasElement>("[data-synapse]")
+    if (!canvas || canvas.dataset.ready === "true") return
+    canvas.dataset.ready = "true"
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const COUNT = 26
+    const MAX_DIST = 320
+
+    let w = 0
+    let h = 0
+    let nodes: Node[] = []
+    let pulses: Pulse[] = []
+
+    function resize() {
+      w = window.innerWidth
+      h = window.innerHeight
+      canvas.width = Math.floor(w * dpr)
+      canvas.height = Math.floor(h * dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      nodes = Array.from({ length: COUNT }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        level: 0,
+      }))
+      pulses = []
+    }
+
+    function fire(i: number) {
+      nodes[i].level = 1
+      const candidates: number[] = []
+      for (let j = 0; j < nodes.length; j++) {
+        if (j === i) continue
+        const d = Math.hypot(nodes[j].x - nodes[i].x, nodes[j].y - nodes[i].y)
+        if (d < MAX_DIST) candidates.push(j)
+      }
+      if (!candidates.length) return
+      const picks = Math.random() < 0.4 ? 2 : 1
+      for (let k = 0; k < picks && candidates.length; k++) {
+        const idx = (Math.random() * candidates.length) | 0
+        pulses.push({ a: i, b: candidates.splice(idx, 1)[0], p: 0 })
+      }
+    }
+
+    let raf = 0
+
+    function frame() {
+      raf = requestAnimationFrame(frame)
+      if (document.hidden) return
+
+      ctx.clearRect(0, 0, w, h)
+      const color = getComputedStyle(canvas).getPropertyValue("color").trim()
+
+      if (Math.random() < 0.02) fire((Math.random() * nodes.length) | 0)
+
+      // propagação
+      for (let i = pulses.length - 1; i >= 0; i--) {
+        const pu = pulses[i]
+        pu.p += 0.008
+        const A = nodes[pu.a]
+        const B = nodes[pu.b]
+        const x = A.x + (B.x - A.x) * pu.p
+        const y = A.y + (B.y - A.y) * pu.p
+
+        ctx.strokeStyle = color
+        ctx.lineWidth = 1
+        ctx.globalAlpha = 0.28 * (1 - pu.p)
+        ctx.beginPath()
+        ctx.moveTo(A.x, A.y)
+        ctx.lineTo(x, y)
+        ctx.stroke()
+
+        ctx.globalAlpha = 0.9 * (1 - pu.p * 0.5)
+        ctx.fillStyle = color
+        ctx.beginPath()
+        ctx.arc(x, y, 1.1, 0, Math.PI * 2)
+        ctx.fill()
+
+        if (pu.p >= 1) {
+          B.level = Math.min(1, B.level + 0.9)
+          pulses.splice(i, 1)
+        }
+      }
+
+      // nós
+      for (const n of nodes) {
+        n.level *= 0.985
+        const base = 1.0
+        const r = base + n.level * 2.8
+
+        if (n.level > 0.02) {
+          const g = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, 17 * n.level)
+          g.addColorStop(0, color)
+          g.addColorStop(1, "transparent")
+          ctx.globalAlpha = 0.24 * n.level
+          ctx.fillStyle = g
+          ctx.beginPath()
+          ctx.arc(n.x, n.y, 17 * n.level, 0, Math.PI * 2)
+          ctx.fill()
+        }
+
+        ctx.globalAlpha = 0.18 + n.level * 0.7
+        ctx.fillStyle = color
+        ctx.beginPath()
+        ctx.arc(n.x, n.y, r, 0, Math.PI * 2)
+        ctx.fill()
+      }
+
+      ctx.globalAlpha = 1
+    }
+
+    resize()
+    window.addEventListener("resize", resize)
+    raf = requestAnimationFrame(frame)
+    document.addEventListener("astro:before-swap", () => cancelAnimationFrame(raf), { once: true })
+  }
+
+  startSynapses()
+  document.addEventListener("astro:page-load", startSynapses)
+</script>

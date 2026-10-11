@@ -137,3 +137,73 @@ const {
     }
   }
 </style>
+
+<style>
+  .section-block[data-reveal] h2,
+  .section-block[data-reveal] .section-more {
+    opacity: 0;
+    transform: translateY(0.45rem);
+    transition:
+      opacity 520ms var(--motion-ease),
+      transform 520ms var(--motion-ease);
+  }
+
+  .section-block[data-reveal] h2::after {
+    inline-size: 0;
+  }
+
+  .section-block[data-revealed] h2,
+  .section-block[data-revealed] .section-more {
+    opacity: 1;
+    transform: none;
+  }
+
+  .section-block[data-revealed] .section-more {
+    transition-delay: 90ms;
+  }
+
+  .section-block[data-revealed] h2::after {
+    inline-size: 2rem;
+    transition-delay: 220ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-block[data-reveal] h2,
+    .section-block[data-reveal] .section-more {
+      opacity: 1;
+      transform: none;
+    }
+
+    .section-block[data-reveal] h2::after {
+      inline-size: 2rem;
+    }
+  }
+</style>
+
+<script>
+  function revealSections() {
+    const blocks = document.querySelectorAll<HTMLElement>(".section-block")
+    if (!blocks.length) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            ;(entry.target as HTMLElement).dataset.revealed = ""
+            observer.unobserve(entry.target)
+          }
+        }
+      },
+      { rootMargin: "0px 0px -12% 0px" },
+    )
+
+    for (const block of blocks) {
+      if (block.dataset.reveal !== undefined) continue
+      block.dataset.reveal = ""
+      observer.observe(block)
+    }
+  }
+
+  revealSections()
+  document.addEventListener("astro:page-load", revealSections)
+</script>

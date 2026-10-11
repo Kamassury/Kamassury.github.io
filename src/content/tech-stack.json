@@ -1,50 +1,37 @@
 {
-  "description": "Languages, frameworks, and infrastructure from my work.",
+  "description": "Ferramentas e áreas com que trabalho.",
   "groups": [
     {
-      "name": "Languages",
+      "name": "Linguagens",
       "icon": "mingcute:code-line",
-      "items": ["Python", "TypeScript", "JavaScript", "SQL", "Bash", "R"]
+      "items": ["Python", "MATLAB", "LaTeX"]
     },
     {
-      "name": "AI & ML",
+      "name": "Aprendizado de máquina",
       "icon": "mingcute:ai-line",
       "items": [
-        "LLM",
-        "prompt engineering",
-        "evaluation",
-        "agents",
-        "RAG",
-        "Fine-tuning",
         "PyTorch",
-        "Hugging Face ecosystem",
-        "Unsloth",
-        "Inspect AI"
+        "TensorFlow",
+        "NumPy",
+        "SciPy",
+        "scikit-learn"
       ]
     },
     {
-      "name": "Backend & Data",
+      "name": "Áreas",
       "icon": "mingcute:server-line",
       "items": [
-        "FastAPI",
-        "Flask",
-        "Express.js",
-        "REST APIs",
-        "PostgreSQL",
-        "SQLite",
-        "ClickHouse",
-        "Prisma"
+        "Learning with Noisy Labels",
+        "Computer Vision",
+        "Edge AI",
+        "Information Theory",
+        "Scientific Computing"
       ]
     },
     {
-      "name": "Frontend & Product",
-      "icon": "mingcute:layout-line",
-      "items": ["React", "Astro", "Next.js", "Tailwind CSS", "shadcn/ui"]
-    },
-    {
-      "name": "DevOps",
-      "icon": "mingcute:terminal-box-line",
-      "items": ["Git", "Docker", "CI/CD", "Vercel", "Railway"]
+      "name": "Ferramentas",
+      "icon": "mingcute:terminal-line",
+      "items": ["Git", "Docker", "Jupyter", "Linux"]
     }
   ]
 }

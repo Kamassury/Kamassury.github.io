@@ -3,6 +3,8 @@ import "@/styles/global.css"
 
 import { SITE } from "@site-config"
 import BackToTop from "@/components/base/BackToTop.astro"
+import FieldBackground from "@/components/base/FieldBackground.astro"
+import SynapseLayer from "@/components/base/SynapseLayer.astro"
 import Head from "@/components/layout/Head.astro"
 import Footer from "@/components/layout/Footer.astro"
 import Header from "@/components/layout/Header.astro"
@@ -59,6 +61,8 @@ const {
     <slot name="head" />
   </Head>
   <body>
+    <FieldBackground />
+    <SynapseLayer />
     <MenuBar>
       <Header />
       {Astro.slots.has("subposts-navigation-header") && (

@@ -1,0 +1,109 @@
+---
+import fs from "node:fs"
+import path from "node:path"
+
+const bib = fs.readFileSync(
+  path.resolve("src/content/publications/main.bib"),
+  "utf-8",
+)
+const pubCount = (bib.match(/^@\w+\{/gm) || []).length
+
+const projectDir = path.resolve("src/content/projects")
+const projectCount = fs
+  .readdirSync(projectDir)
+  .filter((f) => f.endsWith(".md") && f !== "README.md").length
+
+const stats = [
+  { value: pubCount, suffix: "", label: "Publicações" },
+  { value: projectCount, suffix: "", label: "Projetos" },
+  { value: 44, suffix: "", label: "Citações" },
+]
+---
+
+<ul class="stats-row" data-stats>
+  {stats.map((s) => (
+    <li>
+      <span class="stat-value" data-stat-value={s.value}>0</span><span class="stat-suffix">{s.suffix}</span>
+      <span class="stat-label">{s.label}</span>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-s);
+    margin-block: var(--space-l);
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .stats-row li {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+  }
+
+  .stat-value,
+  .stat-suffix {
+    color: var(--foreground);
+    font-size: var(--step-4);
+    font-weight: var(--font-weight-medium);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .stat-label {
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+</style>
+
+<script>
+  function animateStats() {
+    const row = document.querySelector<HTMLElement>("[data-stats]")
+    if (!row || row.dataset.done === "true") return
+    row.dataset.done = "true"
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    const values = row.querySelectorAll<HTMLElement>("[data-stat-value]")
+
+    const run = () => {
+      values.forEach((el, i) => {
+        const target = Number(el.dataset.statValue || 0)
+        if (reduce) {
+          el.textContent = String(target)
+          return
+        }
+        const duration = 1100
+        const delay = i * 120
+        const start = performance.now() + delay
+        const tick = (now: number) => {
+          if (now < start) return requestAnimationFrame(tick)
+          const p = Math.min(1, (now - start) / duration)
+          const eased = 1 - Math.pow(1 - p, 3)
+          el.textContent = String(Math.round(target * eased))
+          if (p < 1) requestAnimationFrame(tick)
+        }
+        requestAnimationFrame(tick)
+      })
+    }
+
+    new IntersectionObserver(
+      (entries, obs) => {
+        if (entries[0].isIntersecting) {
+          run()
+          obs.disconnect()
+        }
+      },
+      { threshold: 0.4 },
+    ).observe(row)
+  }
+
+  animateStats()
+  document.addEventListener("astro:page-load", animateStats)
+</script>

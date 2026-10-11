@@ -1,0 +1,166 @@
+---
+---
+
+<canvas class="field-bg" data-field aria-hidden="true"></canvas>
+
+<style is:global>
+  html { background-color: var(--background); }
+  body { background-color: transparent; }
+</style>
+
+<style>
+  .field-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    inline-size: 100%;
+    block-size: 100%;
+    pointer-events: none;
+    color: light-dark(oklch(0.52 0.13 150), var(--primary));
+    opacity: 0.5;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .field-bg { display: none; }
+  }
+</style>
+
+<script>
+  function startField() {
+    const canvas = document.querySelector<HTMLCanvasElement>("[data-field]")
+    if (!canvas || canvas.dataset.ready === "true") return
+    canvas.dataset.ready = "true"
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2)
+    const N = 700
+    const R = 230
+    const px = new Float32Array(N)
+    const py = new Float32Array(N)
+    const ox = new Float32Array(N)
+    const oy = new Float32Array(N)
+    const life = new Float32Array(N)
+
+    let w = 0
+    let h = 0
+    let mx = -9999
+    let my = -9999
+
+    function seed(i: number) {
+      px[i] = Math.random() * w
+      py[i] = Math.random() * h
+      ox[i] = px[i]
+      oy[i] = py[i]
+      life[i] = 40 + Math.random() * 160
+    }
+
+    function resize() {
+      w = window.innerWidth
+      h = window.innerHeight
+      canvas.width = Math.floor(w * dpr)
+      canvas.height = Math.floor(h * dpr)
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      ctx.clearRect(0, 0, w, h)
+      for (let i = 0; i < N; i++) seed(i)
+    }
+
+    function angleAt(x: number, y: number, t: number) {
+      return (
+        (Math.sin(x * 0.0016 + t) +
+          Math.sin(y * 0.0021 - t * 0.8) +
+          Math.sin((x + y) * 0.0012 + t * 0.5)) *
+        Math.PI
+      )
+    }
+
+    let t = 0
+    let raf = 0
+
+    function frame() {
+      raf = requestAnimationFrame(frame)
+      if (document.hidden) return
+      t += 0.0016
+
+      ctx.globalCompositeOperation = "destination-out"
+      ctx.fillStyle = "rgba(0,0,0,0.045)"
+      ctx.fillRect(0, 0, w, h)
+      ctx.globalCompositeOperation = "source-over"
+
+      const color = getComputedStyle(canvas).getPropertyValue("color").trim()
+      ctx.strokeStyle = color || "currentColor"
+      ctx.lineWidth = 1
+      ctx.globalAlpha = 0.34
+      ctx.beginPath()
+
+      for (let i = 0; i < N; i++) {
+        const a = angleAt(px[i], py[i], t)
+        let vx = Math.cos(a) * 1.25
+        let vy = Math.sin(a) * 1.25
+
+        const dx = px[i] - mx
+        const dy = py[i] - my
+        const d = Math.hypot(dx, dy)
+        if (d < R) {
+          const f = 1 - d / R
+          const ux = dx / (d + 1)
+          const uy = dy / (d + 1)
+          // componente tangencial: gira em torno do cursor
+          vx += -uy * f * 4.2
+          vy += ux * f * 4.2
+          // componente radial leve: evita que colapsem no centro
+          vx += ux * f * 1.3
+          vy += uy * f * 1.3
+        }
+
+        ox[i] = px[i]
+        oy[i] = py[i]
+        px[i] += vx
+        py[i] += vy
+        life[i] -= 1
+
+        if (
+          life[i] <= 0 ||
+          px[i] < -20 ||
+          px[i] > w + 20 ||
+          py[i] < -20 ||
+          py[i] > h + 20
+        ) {
+          seed(i)
+          continue
+        }
+
+        ctx.moveTo(ox[i], oy[i])
+        ctx.lineTo(px[i], py[i])
+      }
+
+      ctx.stroke()
+      ctx.globalAlpha = 1
+    }
+
+    resize()
+    window.addEventListener("resize", resize)
+    window.addEventListener("pointermove", (e) => {
+      mx = e.clientX
+      my = e.clientY
+    })
+    window.addEventListener("pointerleave", () => {
+      mx = -9999
+      my = -9999
+    })
+    raf = requestAnimationFrame(frame)
+    document.addEventListener("astro:before-swap", () => cancelAnimationFrame(raf), { once: true })
+  }
+
+  startField()
+  document.addEventListener("astro:page-load", startField)
+</script>
+
+<style>
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .field-bg { opacity: 0.8; }
+  }
+
+  :root[data-theme="light"] .field-bg { opacity: 0.8; }
+</style>
