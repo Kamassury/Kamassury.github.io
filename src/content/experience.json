@@ -1,0 +1,87 @@
+[
+  {
+    "id": "certi-2026",
+    "category": "research",
+    "title": "Pesquisador/Desenvolvedor em IA",
+    "org": "Fundação CERTI",
+    "orgUrl": "https://certi.org.br/",
+    "startDate": "2026-03",
+    "location": "Florianópolis, Brazil",
+    "description": "Centro de Convergência Digital e Mecatrônica (CDM). AI methods for complex and mission-critical systems, with a focus on robustness, reliability and validation in real environments. Lines: computer vision, edge AI, intelligent systems for critical settings."
+  },
+  {
+    "id": "isi-se-2024",
+    "category": "research",
+    "title": "Machine Learning Researcher",
+    "org": "Instituto SENAI de Inovação em Sistemas Embarcados",
+    "startDate": "2024-02",
+    "endDate": "2026-02",
+    "location": "Florianópolis, Brazil",
+    "description": "Research and development of AI tools for Industry 4.0, with emphasis on industrial AI and embedded systems for automation."
+  },
+  {
+    "id": "ifpa-2021",
+    "category": "research",
+    "title": "Collaborating Researcher",
+    "org": "Instituto Federal do Pará",
+    "orgUrl": "https://ifpa.edu.br",
+    "startDate": "2021-06",
+    "location": "Santarém, Brazil",
+    "description": "Exact Sciences research group. Computational modeling, numerical methods and mathematical physics, at the intersection with machine learning. Co-supervision of undergraduate theses."
+  },
+  {
+    "id": "ufsc-gama-2018",
+    "category": "research",
+    "title": "Doctoral Researcher",
+    "org": "GAMA — Machine Learning and Applications Group, UFSC",
+    "orgUrl": "https://ufsc.br",
+    "startDate": "2018-05",
+    "endDate": "2025-12",
+    "location": "Florianópolis, Brazil",
+    "description": "Research on uncertainty estimation, learning with noisy labels and semi-supervised methods for reliable deep models. CNPq fellow."
+  },
+  {
+    "id": "ufsc-teaching-2021",
+    "category": "teaching",
+    "title": "Teaching Internship, Advanced Topics in Signal Processing: Machine Learning",
+    "org": "Universidade Federal de Santa Catarina",
+    "orgUrl": "https://ufsc.br",
+    "startDate": "2021-08",
+    "endDate": "2022-07",
+    "location": "Florianópolis, Brazil",
+    "description": "Graduate course EEL7513, covering machine learning methods for signal processing."
+  },
+  {
+    "id": "ufsc-phd-2020",
+    "category": "education",
+    "title": "Ph.D. in Electrical Engineering",
+    "org": "Universidade Federal de Santa Catarina",
+    "orgUrl": "https://ufsc.br",
+    "startDate": "2020-03",
+    "endDate": "2025-12",
+    "location": "Florianópolis, Brazil",
+    "description": "Thesis: Cyclic Co-Teaching and Optimized Baselines for Robust Deep Learning with Noisy Labels. Advisor: Danilo Silva. CNPq fellow."
+  },
+  {
+    "id": "ufsc-msc-2018",
+    "category": "education",
+    "title": "M.Sc. in Electrical Engineering",
+    "org": "Universidade Federal de Santa Catarina",
+    "orgUrl": "https://ufsc.br",
+    "startDate": "2018-03",
+    "endDate": "2020-12",
+    "location": "Florianópolis, Brazil",
+    "description": "Dissertation: Decoding of Short-Length Codes using Deep Neural Networks. Advisor: Danilo Silva. CNPq fellow."
+  },
+  {
+    "id": "ufopa-bsc-2011",
+    "category": "education",
+    "title": "B.Sc. in Engineering Physics",
+    "org": "Universidade Federal do Oeste do Pará",
+    "orgUrl": "https://ufopa.edu.br",
+    "startDate": "2011-03",
+    "endDate": "2017-12",
+    "location": "Santarém, Brazil",
+    "description": "Exchange period at Universidade de Aveiro, Portugal. Thesis on the coefficient of restitution. CNPq fellow."
+  }
+]
