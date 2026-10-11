@@ -1,10 +1,12 @@
-I build and study machine learning systems for settings where the data is
-noisy, the supervision is imperfect, and the computing budget is tight.
+Construo e estudo sistemas de aprendizado de máquina para cenários em que os
+dados são ruidosos, a supervisão é imperfeita e o orçamento computacional é
+restrito.
 
-My work spans robust learning with noisy labels, neural decoders for short
-block codes, computer vision and edge inference for mission-critical systems,
-efficient LLM serving, and the question of how to decide whether a model is
-good enough to deploy — robustness testing, traceability and AI governance.
+Meu trabalho abrange aprendizado robusto com rótulos ruidosos, decodificadores
+neurais para códigos de bloco curtos, visão computacional e inferência em borda
+para sistemas de missão crítica, inferência eficiente de LLMs, e a questão de
+como decidir se um modelo é bom o bastante para ser implantado — testes de
+robustez, rastreabilidade e governança de IA.
 
-I trained in engineering physics and still work on computational modeling and
-mathematical physics with a research group at IFPA.
+Tenho formação em engenharia física e sigo trabalhando com modelagem
+computacional e física matemática junto a um grupo de pesquisa no IFPA.

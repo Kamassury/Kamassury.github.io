@@ -9,7 +9,7 @@ import type {
 export const SITE: SiteConfig = {
   title: "Jorge Kamassury",
   description:
-    "Research in robust machine learning, neural decoding and physics-informed computational modeling.",
+    "Pesquisa em aprendizado de máquina robusto, decodificação neural e modelagem computacional.",
   href: "https://kamassury.github.io",
   author: "Jorge Kysnney Santos Kamassury",
   dir: "ltr",
@@ -17,7 +17,7 @@ export const SITE: SiteConfig = {
   defaultPostImage: "/img/social-preview.png",
 
   locale: {
-    lang: "en-US",
+    lang: "pt-BR",
     options: {
       day: "numeric",
       month: "short",
@@ -53,7 +53,7 @@ export const SITE: SiteConfig = {
 
 export const PROFILE: ProfileConfig = {
   name: SITE.title,
-  tagline: "AI Researcher & Developer at Fundação CERTI",
+  tagline: "Pesquisador e Desenvolvedor de IA · CERTI",
   email: "kamassury@gmail.com",
   location: "Florianópolis, Brazil",
   links: {
@@ -61,6 +61,7 @@ export const PROFILE: ProfileConfig = {
     scholar: "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8335-9796",
     linkedin: "https://www.linkedin.com/in/jorge-kamassury",
+    cv: "http://lattes.cnpq.br/1350512148935889",
   },
   highlightLinks: ["github"],
   linksPlacement: {
@@ -71,9 +72,9 @@ export const PROFILE: ProfileConfig = {
 }
 
 export const NAV_LINKS: LinkConfig[] = [
-  { href: "/projects", label: "Projects" },
-  { href: "/publications", label: "Publications" },
-  { href: "/teaching", label: "Teaching" },
+  { href: "/projects", label: "Projetos" },
+  { href: "/publications", label: "Publicações" },
+  { href: "/teaching", label: "Ensino" },
   { href: "/blog", label: "Blog" },
 ]
 

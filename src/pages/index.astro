@@ -60,7 +60,7 @@ const recentPostsMetadata = await Promise.all(
   <Profile profile={PROFILE} />
 
   {renderedUpdates.length > 0 && (
-      <Section title="Latest updates" moreLink="/now">
+      <Section title="Atualizações" moreLink="/now">
         <UpdatesInline
           renderedUpdates={renderedUpdates}
           itemClass="home-update-content"
@@ -69,7 +69,7 @@ const recentPostsMetadata = await Promise.all(
     )}
 
   {selectedPublications.length > 0 && (
-      <Section title="Selected publications" moreLink="/publications">
+      <Section title="Publicações selecionadas" moreLink="/publications">
         <CardGroup class="selected-publications">
           {selectedPublications.map((pub) => (
             <PubCard pub={pub} filterableTags={false} />
@@ -79,7 +79,7 @@ const recentPostsMetadata = await Promise.all(
     )}
 
   {careerHighlights.length > 0 && (
-      <Section title="Career highlights" moreLink={cvHref} moreText="see CV →">
+      <Section title="Trajetória" moreLink={cvHref} moreText="ver CV →">
         <ExperienceTimeline
           entries={careerHighlights}
           limit={careerHighlightCount}

@@ -1,1 +1,1 @@
-Serving as a reviewer for SBrT 2026, BRACIS 2026, ENIAC 2026 and KDMiLe 2026.
+Atuando como revisor no SBrT 2026, BRACIS 2026, ENIAC 2026 e KDMiLe 2026.
