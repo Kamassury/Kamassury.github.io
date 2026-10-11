@@ -100,9 +100,9 @@ export const PUB_CONFIG: PublicationConfig = {
 
 export const FOOTER: FooterConfig = {
   credits: true,
-  sourceCode: "https://github.com/mychiffonn/myscholar",
+  sourceCode: "https://github.com/Kamassury/research-site",
   sourceContent:
-    "https://github.com/mychiffonn/myscholar/tree/main/src/content",
+    "https://github.com/Kamassury/research-site/tree/main/src/content",
   footerLinks: [],
 }
 
