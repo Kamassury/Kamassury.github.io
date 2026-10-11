@@ -8,16 +8,16 @@ import {RESEARCH_ICONS} from "@/data/researchIcons";
 const { research_areas } = profile;
 ---
 
-<Layout title="Research | Dr. Marie Curie">
+<Layout title="Research | Jorge Kamassury">
   <div class="prose max-w-none">
     <h1 class="text-3xl font-bold mb-8">Research Statement</h1>
 
     <div class="mb-12">
       <p class="text-lg mb-6">
-        My research focuses on groundbreaking investigations into radioactivity and the discovery of new radioactive elements. Through meticulous experimental techniques and innovative methodologies, I aim to advance our understanding of radioactive phenomena and their applications in both physics and chemistry.
+        My research addresses a recurring obstacle in applied machine learning: models are trained on data that is incomplete, noisy, or imperfectly annotated, yet they are expected to operate reliably. I study how learning algorithms behave under such imperfect supervision, and how training, sample selection and evaluation can be designed so that reliability is measured rather than assumed.
       </p>
       <p class="text-lg mb-6">
-        This interdisciplinary approach has led to significant discoveries, including the isolation of polonium and radium, contributing to the foundation of modern nuclear physics and radiochemistry.
+        This line began with neural decoding for short block codes, where the problem is posed in information-theoretic terms, and developed into robust deep learning with noisy labels, where the same concern reappears as a question of which samples a model should trust. A third thread runs through both: a background in mathematical physics and computational modeling that shapes how I formulate problems and read results.
       </p>
     </div>
 
@@ -50,20 +50,32 @@ const { research_areas } = profile;
       }
     </div>
 
-    <List listTitle="Current Projects" listItems={[
+    <List listTitle="Projects" listItems={[
       {
-        title: "Radioactivity Studies",
-        description: "Investigation of radioactive properties in uranium minerals and isolation of new radioactive elements."
+        title: "Robust Learning under Imperfect Supervision — ongoing",
+        description: "Uncertainty estimation, learning with noisy labels and semi-supervised methods for reliable deep models. Conducted within GAMA/UFSC under a project coordinated by Danilo Silva. Published outcome: CCT (IEEE Access, 2025)."
       },
       {
-        title: "Measurement Techniques",
-        description: "Development of precise methods for measuring radioactive emissions and their properties."
+        title: "Benchmarking Noisy Label Detection — preprint",
+        description: "Systematic comparison of noisy label detection methods under a consistent evaluation protocol. Joint work with H. Pickler and D. Silva; available as a 2025 preprint, not yet peer reviewed."
+      },
+      {
+        title: "Neural Decoding for Short Block Codes — completed",
+        description: "Syndrome-based neural decoders for short linear block and BCH codes, including iterative error decimation and optimization under critical communication regimes. Developed during the MSc and published between 2019 and 2022."
+      },
+      {
+        title: "Computational Modeling and Mathematical Physics — ongoing",
+        description: "Collaboration with the Exact Sciences research group at IFPA on numerical methods, differential equations and physics-informed modeling, including supervision of undergraduate theses."
+      },
+      {
+        title: "Applied AI for Industrial and Critical Systems — ongoing",
+        description: "Computer vision, edge inference and intelligent systems for production and mission-critical environments. Developed at ISI-SE (2024-2026) and currently at Fundação CERTI."
       }
     ]} />
 
-    <h2 class="text-2xl font-bold mb-6">Research Impact</h2>
+    <h2 class="text-2xl font-bold mb-6">Emerging Directions</h2>
     <p class="text-lg mb-6">
-      My research has opened new frontiers in radioactivity studies, leading to practical applications in both scientific research and medical treatments. The discoveries have revolutionized our understanding of atomic structure and radioactive decay processes.
+      Two directions are currently exploratory rather than established. The first is scientific machine learning in a stricter sense — structured neural models that encode physical priors, such as Hamiltonian and physics-informed networks, and the connections between statistical physics and learning dynamics. Work here is in preparation and not yet published. The second is the evaluation and assurance of AI systems: how reliability claims can be supported by systematic testing, traceability and documented evidence. This follows naturally from the robustness work, but I have no published contribution in it so far.
     </p>
   </div>
 </Layout>
