@@ -61,7 +61,7 @@ export const PROFILE: ProfileConfig = {
     googleScholar: "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8335-9796",
     linkedin: "https://www.linkedin.com/in/jorge-kamassury",
-    cv: "http://lattes.cnpq.br/1350512148935889",
+    cv: "/cv",
   },
   highlightLinks: ["github"],
   linksPlacement: {
