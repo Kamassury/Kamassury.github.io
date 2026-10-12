@@ -34,18 +34,18 @@ const equalContributionNote = [
 ---
 
 <CommonLayout
-  title="Publications"
-  description="Publications, preprints, and conference tutorials"
-  breadcrumbs={[{ label: "Publications", icon: "research" }]}
+  title="Publicações"
+  description="Artigos em periódicos, capítulos de livro, trabalhos em conferências e preprints."
+  breadcrumbs={[{ label: "Publicações", icon: "research" }]}
   prose={false}
   celestial
 >
   <p class="publication-intro">
-    {formatCount(allPublicationsFlat.length, "publication")}
+    {allPublicationsFlat.length} publicações
     ·{" "}
     {ggScholarUrl ? (
         <>
-          Full list on{" "}
+          Lista completa no{" "}
           <Link href={ggScholarUrl} external underline class="publication-scholar-link">
             Google Scholar.
           </Link>
@@ -66,7 +66,7 @@ const equalContributionNote = [
           aria-label="Sort publications"
         >
           <Icon name="mingcute:sort-descending-line" size={16} />
-          <span data-sort-label>By Relevance</span>
+          <span data-sort-label>Por relevância</span>
           <Icon name="chevron-down" size={14} />
         </button>
         <button
@@ -74,14 +74,14 @@ const equalContributionNote = [
           class="pub-sort-option"
           aria-selected="true"
         >
-          By Relevance
+          Por relevância
         </button>
         <button
           data-dropdown-item="year"
           class="pub-sort-option"
           aria-selected="false"
         >
-          By Year
+          Por ano
         </button>
       </Dropdown>
     </div>
@@ -104,7 +104,7 @@ const equalContributionNote = [
           ))}
           <span class="chip-active-filter" data-active-filter hidden>
             <TaxonomyChip
-              label="Clear"
+              label="Limpar"
               prefix="×"
               tone="destructive"
               data-clear-filter
@@ -134,8 +134,8 @@ const equalContributionNote = [
         </CardGroup>
       ) : (
         <div class="empty-state">
-          <h2>No publications found</h2>
-          <p>No publications yet.</p>
+          <h2>Nenhuma publicação encontrada</h2>
+          <p>Tente limpar o filtro.</p>
         </div>
       )}
   </div>
@@ -156,8 +156,8 @@ const equalContributionNote = [
         ))
       ) : (
         <div class="empty-state">
-          <h2>No publications found</h2>
-          <p>No publications yet.</p>
+          <h2>Nenhuma publicação encontrada</h2>
+          <p>Tente limpar o filtro.</p>
         </div>
       )}
   </div>
@@ -215,7 +215,7 @@ const equalContributionNote = [
 
       if (sortLabel) {
         sortLabel.textContent =
-          mode === "relevance" ? "By Relevance" : "By Year"
+          mode === "relevance" ? "Por relevância" : "Por ano"
       }
 
       sortOptions.forEach((opt) => {

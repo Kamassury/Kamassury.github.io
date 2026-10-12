@@ -58,14 +58,14 @@ export const PROFILE: ProfileConfig = {
   location: "Florianópolis, Brazil",
   links: {
     github: "https://github.com/Kamassury",
-    scholar: "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en",
+    googleScholar: "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en",
     orcid: "https://orcid.org/0000-0001-8335-9796",
     linkedin: "https://www.linkedin.com/in/jorge-kamassury",
     cv: "http://lattes.cnpq.br/1350512148935889",
   },
   highlightLinks: ["github"],
   linksPlacement: {
-    header: ["email", "github", "scholar", "orcid", "linkedin"],
+    header: ["email", "github", "googleScholar", "orcid", "linkedin"],
     about: false,
     footer: false,
   },
