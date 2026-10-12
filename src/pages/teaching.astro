@@ -1,0 +1,236 @@
+---
+import CommonLayout from "@/layouts/CommonLayout.astro"
+import Section from "@/components/layout/Section.astro"
+import Icon from "@/components/base/Icon.astro"
+import Link from "@/components/base/Link.astro"
+
+const orientacoes = [
+  {
+    icon: "mingcute:flask-line",
+    title: "Modelagem de sistemas oscilatórios",
+    text: "Métodos numéricos e aprendizado de máquina aplicados ao ensino de física clássica.",
+  },
+  {
+    icon: "mingcute:book-5-line",
+    title: "Fundamentos de mecânica quântica",
+    text: "Formalismo da função de onda no regime não-relativístico.",
+  },
+]
+
+const revisao = [
+  { sigla: "SBrT", nome: "Simpósio Brasileiro de Telecomunicações e Processamento de Sinais", anos: "2026" },
+  { sigla: "BRACIS", nome: "Brazilian Conference on Intelligent Systems", anos: "2026" },
+  { sigla: "ENIAC", nome: "Encontro Nacional de Inteligência Artificial e Computacional", anos: "2025, 2026" },
+  { sigla: "KDMiLe", nome: "Symposium on Knowledge Discovery, Mining and Learning", anos: "2026" },
+  { sigla: "CBIC", nome: "Congresso Brasileiro de Inteligência Computacional", anos: "2021" },
+]
+
+const cursos = [
+  { ano: "2017", itens: ["Engenharia de controle automático: técnicas clássicas para projeto de controladores"] },
+  { ano: "2016", itens: ["Bases de física para biofísica: teoria e prática", "Microcontroladores: arquitetura, programação e simulação da família PIC"] },
+  { ano: "2015", itens: ["Introdução à modelagem matemática e computacional"] },
+  { ano: "2014", itens: ["Introdução ao Simulink aplicado a sistemas dinâmicos", "Métodos numéricos e otimização usando Matlab"] },
+  { ano: "2013", itens: ["Física computacional", "Simulação e modelagem aplicadas à física"] },
+]
+---
+
+<CommonLayout
+  title="Ensino"
+  description="Orientações, docência e serviço à comunidade acadêmica."
+  breadcrumbs={[{ label: "Ensino", icon: "research" }]}
+  prose={false}
+  celestial
+>
+  <Section title="Orientações" spacing="none">
+    <p class="lead">
+      Co-orientação de trabalhos de conclusão de curso em Física no{" "}
+      <Link href="https://ifpa.edu.br" external underline>Instituto Federal do Pará</Link>,
+      em duas frentes.
+    </p>
+    <ul class="rows">
+      {orientacoes.map((o) => (
+        <li>
+          <Icon name={o.icon} size={18} />
+          <div>
+            <strong>{o.title}</strong>
+            <span>{o.text}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
+    <p class="note">
+      Tenho interesse em orientar trabalhos na interseção entre física computacional,
+      métodos numéricos e aprendizado de máquina.
+    </p>
+  </Section>
+
+  <Section title="Docência">
+    <ul class="rows">
+      <li>
+        <Icon name="mingcute:presentation-1-line" size={18} />
+        <div>
+          <strong>EEL7513 — Tópicos Avançados em Processamento de Sinais: Aprendizado de Máquina</strong>
+          <span>Estágio em docência na pós-graduação em Engenharia Elétrica da UFSC (2021–2022).</span>
+        </div>
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Revisão por pares">
+    <p class="lead">
+      Revisor em conferências da Sociedade Brasileira de Computação e da
+      Sociedade Brasileira de Telecomunicações.
+    </p>
+    <ul class="venues">
+      {revisao.map((r) => (
+        <li>
+          <Icon name="mingcute:file-check-line" size={16} />
+          <strong>{r.sigla}</strong>
+          <span class="venue-name">{r.nome}</span>
+          <span class="venue-years">{r.anos}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section title="Cursos de curta duração">
+    <p class="lead">
+      Ministrados na UFOPA entre 2013 e 2017, em física computacional,
+      métodos numéricos e sistemas embarcados.
+    </p>
+    <ul class="years">
+      {cursos.map((c) => (
+        <li>
+          <span class="year">{c.ano}</span>
+          <div>
+            {c.itens.map((i) => <span class="course">{i}</span>)}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Section>
+</CommonLayout>
+
+<style>
+  .lead,
+  .note {
+    margin: 0;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+
+  .note {
+    margin-block-start: var(--space-2xs);
+  }
+
+  .rows,
+  .venues,
+  .years {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin: var(--space-2xs) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .rows li {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+
+  .rows li svg {
+    flex: none;
+    margin-block-start: 0.15em;
+    color: var(--primary);
+    opacity: 0.85;
+  }
+
+  .rows li div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-inline-size: 0;
+  }
+
+  .rows li span {
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+
+  .venues {
+    gap: var(--space-3xs);
+  }
+
+  .venues li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2xs);
+    padding-block: 0.35rem;
+    border-block-end: 1px solid
+      color-mix(in oklab, var(--foreground) 8%, transparent);
+  }
+
+  .venues li:last-child {
+    border-block-end: 0;
+  }
+
+  .venues li svg {
+    flex: none;
+    align-self: center;
+    color: var(--primary);
+    opacity: 0.7;
+  }
+
+  .venue-name {
+    flex: 1;
+    min-inline-size: 0;
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+
+  .venue-years {
+    flex: none;
+    color: var(--muted-foreground);
+    font-size: var(--step--2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .years li {
+    display: flex;
+    gap: var(--space-s);
+    align-items: baseline;
+  }
+
+  .year {
+    flex: none;
+    inline-size: 2.75rem;
+    color: var(--primary);
+    font-size: var(--step--1);
+    font-weight: var(--font-weight-medium);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .years li div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-inline-size: 0;
+  }
+
+  .course {
+    color: var(--muted-foreground);
+    font-size: var(--step--1);
+  }
+
+  @media (width < 36rem) {
+    .venues li {
+      flex-wrap: wrap;
+    }
+
+    .venue-name {
+      flex-basis: 100%;
+    }
+  }
+</style>
