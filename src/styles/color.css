@@ -1,17 +1,11 @@
 :root {
-  --background: light-dark(
-    oklch(0.9578 0.0058 264.53),
-    oklch(0.2007 0.0199 284.46)
-  );
-  --foreground: light-dark(
-    oklch(0.4363 0.0428 281.03),
-    oklch(0.8708 0.0481 273.67)
-  );
-  --primary: light-dark(oklch(0.7789 0.1553 140.9), oklch(0.7789 0.1553 140.9));
+  --background: light-dark(oklch(0.985 0 0), oklch(0.18 0 0));
+  --foreground: light-dark(oklch(0.24 0 0), oklch(0.91 0 0));
+  --primary: light-dark(oklch(0.52 0.13 148), oklch(0.78 0.155 141));
   --primary-foreground: light-dark(oklch(0.205 0 0), oklch(0.205 0 0));
-  --muted: light-dark(oklch(0.92 0.002 264.53), oklch(0.269 0 0));
-  --muted-foreground: light-dark(oklch(0.556 0 0), oklch(0.708 0 0));
-  --accent: light-dark(oklch(0.6182 0.1121 292.61), oklch(0.797 0.1121 292.61));
+  --muted: light-dark(oklch(0.94 0 0), oklch(0.25 0 0));
+  --muted-foreground: light-dark(oklch(0.44 0 0), oklch(0.70 0 0));
+  --accent: light-dark(oklch(0.50 0.09 196), oklch(0.74 0.09 196));
   --accent-foreground: light-dark(
     oklch(0.9578 0.0058 264.53),
     oklch(0.145 0 0)
