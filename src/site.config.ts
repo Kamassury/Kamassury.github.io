@@ -55,7 +55,7 @@ export const PROFILE: ProfileConfig = {
   name: SITE.title,
   tagline: "Pesquisador e Desenvolvedor de IA · CERTI",
   email: "kamassury@gmail.com",
-  location: "Florianópolis, Brazil",
+  location: "Florianópolis, Brasil",
   links: {
     github: "https://github.com/Kamassury",
     googleScholar: "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en",

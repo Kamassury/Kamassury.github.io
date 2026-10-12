@@ -1,13 +1,11 @@
-[mychiffon]
-id       = "mychiffon"
-name     = "My (Chiffon) Nguyen"
-pronouns = "she/her/hers"
-avatar   = "https://gravatar.com/avatar/47b0b83e2fd2cf8838cce30a44e11b7d331cf73a77f7c413f4c4bee986d848c7?size=512&d=initials"
-bio      = "Researcher, Developer, Teacher, and Life-long Learner"
+[kamassury]
+id   = "kamassury"
+name = "Jorge Kamassury"
+bio  = "Pesquisador e desenvolvedor de IA. Aprendizado robusto, decodificação neural e modelagem computacional."
 
-[mychiffon.links]
-website       = "https://mychiffonn.com"
-email         = "hi@mychiffonn.com"
-github        = "https://github.com/mychiffonn"
-googleScholar = "https://scholar.google.com/citations?user=a25a-rUAAAAJ"
-x = "https://x.com/chiffonng"
+[kamassury.links]
+email         = "kamassury@gmail.com"
+github        = "https://github.com/Kamassury"
+googleScholar = "https://scholar.google.com/citations?user=k36ZhmMAAAAJ&hl=en"
+orcid         = "https://orcid.org/0000-0001-8335-9796"
+linkedin      = "https://www.linkedin.com/in/jorge-kamassury"

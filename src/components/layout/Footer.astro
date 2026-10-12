@@ -8,9 +8,9 @@ import { getProfileLinkPlacement } from "@/components/profile/helper"
 const footerLinks = getProfileLinkPlacement("footer")
 
 const sourceLinks = [
-  FOOTER.sourceCode ? { href: FOOTER.sourceCode, label: "Source Code" } : null,
+  FOOTER.sourceCode ? { href: FOOTER.sourceCode, label: "Código do site" } : null,
   FOOTER.sourceContent
-    ? { href: FOOTER.sourceContent, label: "Source Content" }
+    ? { href: FOOTER.sourceContent, label: "Conteúdo" }
     : null,
   ...FOOTER.footerLinks,
 ].filter(Boolean) as { href: string; label: string }[]
@@ -25,13 +25,13 @@ const sourceLinks = [
       {PROFILE.name}.
       {SITE.license ? (
           <>
-            {` Unless otherwise stated, all content is licensed under `}
+            {` Salvo indicação em contrário, o conteúdo está licenciado sob `}
             <Link class="footer-link" href={SITE.license.href} external>
               {SITE.license.label}.
             </Link>
           </>
         ) : (
-          ` All rights reserved.`
+          ` Todos os direitos reservados.`
         )}
     </p>
 
@@ -55,13 +55,13 @@ const sourceLinks = [
 
     {FOOTER.credits && (
         <p>
-          Built with{" "}
+          Feito com{" "}
           <Link href="https://astro.build/" class="footer-link" external>
-            Astro.
+            Astro
           </Link>
-          View
-          <Link href="/palette" class="footer-link">
-            Color Palette.
+          {" e o tema "}
+          <Link href="https://github.com/mychiffonn/myscholar" class="footer-link" external>
+            My Scholar.
           </Link>
         </p>
       )}
