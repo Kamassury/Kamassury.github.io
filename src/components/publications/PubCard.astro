@@ -18,7 +18,21 @@ interface Props {
   filterableTags?: boolean
 }
 
+const PUB_TYPES: Record<string, { label: string; icon: string }> = {
+  article: { label: "Artigo em periódico", icon: "mingcute:news-line" },
+  incollection: { label: "Capítulo de livro", icon: "mingcute:book-5-line" },
+  inbook: { label: "Capítulo de livro", icon: "mingcute:book-5-line" },
+  inproceedings: { label: "Conferência", icon: "mingcute:presentation-1-line" },
+  conference: { label: "Conferência", icon: "mingcute:presentation-1-line" },
+  misc: { label: "Preprint", icon: "academicons:arxiv" },
+  unpublished: { label: "Preprint", icon: "academicons:arxiv" },
+  phdthesis: { label: "Tese", icon: "mingcute:mortarboard-line" },
+  mastersthesis: { label: "Dissertação", icon: "mingcute:mortarboard-line" },
+}
+
 const { pub, filterableTags = true } = Astro.props
+const entryType = (pub.bibtex?.match(/^\s*@(\w+)/) ?? [])[1]?.toLowerCase()
+const pubType = entryType ? PUB_TYPES[entryType] : undefined
 const hiddenAuthorsId = `publication-${slugify(pub.title)}-${pub.year ?? "unknown"}-authors`
 ---
 
@@ -46,6 +60,12 @@ const hiddenAuthorsId = `publication-${slugify(pub.title)}-${pub.year ?? "unknow
 
   <div class="publication-body">
     <CardHeader>
+      {pubType && (
+          <span class="publication-type">
+            <Icon name={pubType.icon} size={14} />
+            <span>{pubType.label}</span>
+          </span>
+        )}
       {pub.award && <span class="publication-award">🏆 {pub.award}</span>}
       {pub.mainUrl ? (
           <CardTitle>
@@ -219,6 +239,22 @@ const hiddenAuthorsId = `publication-${slugify(pub.title)}-${pub.year ?? "unknow
     .publication-card[data-has-image="true"]:hover .publication-media img {
       transform: scale(1.025);
     }
+  }
+
+  .publication-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--muted-foreground);
+    font-size: var(--step--2);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  .publication-type svg {
+    color: var(--primary);
+    opacity: 0.8;
   }
 
   .publication-award {

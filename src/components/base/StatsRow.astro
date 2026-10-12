@@ -1,6 +1,7 @@
 ---
 import fs from "node:fs"
 import path from "node:path"
+import Icon from "@/components/base/Icon.astro"
 
 const bib = fs.readFileSync(
   path.resolve("src/content/publications/main.bib"),
@@ -14,15 +15,16 @@ const projectCount = fs
   .filter((f) => f.endsWith(".md") && f !== "README.md").length
 
 const stats = [
-  { value: pubCount, suffix: "", label: "Publicações" },
-  { value: projectCount, suffix: "", label: "Projetos" },
-  { value: 44, suffix: "", label: "Citações" },
+  { value: pubCount, suffix: "", label: "Publicações", icon: "mingcute:book-5-line" },
+  { value: projectCount, suffix: "", label: "Projetos", icon: "mingcute:code-line" },
+  { value: 44, suffix: "", label: "Citações", icon: "academicons:google-scholar" },
 ]
 ---
 
 <ul class="stats-row" data-stats>
   {stats.map((s) => (
     <li>
+      <Icon name={s.icon} size={18} class="stat-icon" />
       <span class="stat-value" data-stat-value={s.value}>0</span><span class="stat-suffix">{s.suffix}</span>
       <span class="stat-label">{s.label}</span>
     </li>
@@ -53,6 +55,12 @@ const stats = [
     font-weight: var(--font-weight-medium);
     font-variant-numeric: tabular-nums;
     line-height: 1;
+  }
+
+  .stat-icon {
+    margin-inline: auto;
+    color: var(--primary);
+    opacity: 0.7;
   }
 
   .stat-label {
