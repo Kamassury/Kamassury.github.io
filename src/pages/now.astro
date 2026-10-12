@@ -1,0 +1,21 @@
+---
+import { getLatestUpdates } from "@/lib/updates"
+import CommonLayout from "@/layouts/CommonLayout.astro"
+import UpdatesTimeline from "@/components/timeline/UpdatesTimeline.astro"
+
+const renderedUpdates = await getLatestUpdates()
+---
+
+<CommonLayout
+  title="Atualizações"
+  description="O que tenho feito recentemente: publicações, projetos e mudanças de rumo."
+  breadcrumbs={[{ label: "Atualizações", icon: "research" }]}
+  prose={false}
+  celestial
+>
+  {renderedUpdates.length > 0 ? (
+      <UpdatesTimeline renderedUpdates={renderedUpdates} />
+    ) : (
+      <p>Nenhuma atualização por enquanto.</p>
+    )}
+</CommonLayout>
