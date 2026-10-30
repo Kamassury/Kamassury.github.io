@@ -75,7 +75,7 @@ export const NAV_LINKS: LinkConfig[] = [
   { href: "/projects", label: "Projetos" },
   { href: "/publications", label: "Publicações" },
   { href: "/teaching", label: "Ensino" },
-  { href: "/blog", label: "Blog" },
+  // { href: "/blog", label: "Blog" }, // reativar quando houver posts
 ]
 
 export const NAVIGATION: LinkConfig[] = NAV_LINKS.map(({ href, label }) => ({

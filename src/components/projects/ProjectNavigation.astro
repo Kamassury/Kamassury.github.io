@@ -22,7 +22,7 @@ const { prev, next } = Astro.props
         ><Icon name="arrow-left" /></project-navigation-icon
       >
       <project-navigation-label>
-        <span>Previous Project</span>
+        <span>Projeto anterior</span>
         <strong>
           {prev?.data.title || "You're at the first project!"}
         </strong>
@@ -37,7 +37,7 @@ const { prev, next } = Astro.props
   >
     <project-navigation-content data-direction="next">
       <project-navigation-label>
-        <span>Next Project</span>
+        <span>Próximo projeto</span>
         <strong>
           {next?.data.title || "You're at the last project!"}
         </strong>

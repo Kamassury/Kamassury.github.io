@@ -44,7 +44,7 @@ const postsMetadata: PostMeta[] = await Promise.all(
   </stage-header>
 
   {postsMetadata.length === 0 ? (
-      <p class="empty-stage">No posts at this stage yet.</p>
+      <p class="empty-stage">Nenhum texto neste estágio.</p>
     ) : (
       <ul class="post-list">
         {postsMetadata.map((metadata) => (

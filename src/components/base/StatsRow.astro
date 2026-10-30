@@ -17,7 +17,6 @@ const projectCount = fs
 const stats = [
   { value: pubCount, suffix: "", label: "Publicações", icon: "mingcute:book-5-line" },
   { value: projectCount, suffix: "", label: "Projetos", icon: "mingcute:code-line" },
-  { value: 44, suffix: "", label: "Citações", icon: "academicons:google-scholar" },
 ]
 ---
 
@@ -34,7 +33,7 @@ const stats = [
 <style>
   .stats-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: var(--space-s);
     margin-block: var(--space-l);
     padding: 0;

@@ -63,7 +63,7 @@ const githubUsername = githubProfile?.replace(/\/$/, "").split("/").pop()
                     prefix="×"
                     tone="destructive"
                     data-clear-project-filters
-                    aria-label="Clear project filter"
+                    aria-label="Limpar filtro de projetos"
                   />
                 </span>
               </div>
@@ -71,9 +71,9 @@ const githubUsername = githubProfile?.replace(/\/$/, "").split("/").pop()
                 <details class="project-skill-more" data-disclosure>
                   <summary>
                     <span data-skill-more-show>
-                      Show {formatCount(uniqueSkillCounts.length, "more skill")}
+                      Mostrar mais {uniqueSkillCounts.length} {uniqueSkillCounts.length === 1 ? "habilidade" : "habilidades"}
                     </span>
-                    <span data-skill-more-hide>Hide additional skills</span>
+                    <span data-skill-more-hide>Ocultar habilidades</span>
                     <span data-disclosure-chevron>
                       <Icon name="chevron-down" />
                     </span>
